@@ -1,5 +1,11 @@
 # 🌾 Agricultural IoT Data Analytics Platform
 
+## 🖼️ Imagem Hero
+
+![Agricultural IoT Data Analytics Platform Hero Image](images/hero_image.png)
+
+
+
 *[Português](#português) | [English](#english)*
 
 ---
@@ -194,83 +200,83 @@ docker-compose up --build
 kubectl apply -f k8s/
 ```
 
-### 📊 Data Schema
+### 📊 Esquema de Dados
 
-#### Sensor Readings Table
-| Column | Type | Description |
+#### Tabela de Leituras de Sensores
+| Coluna | Tipo | Descrição |
 |--------|------|-------------|
-| sensor_id | STRING | Unique sensor identifier |
-| sensor_type | STRING | Type of sensor (soil_moisture, temperature, etc.) |
-| timestamp | TIMESTAMP | Reading timestamp |
-| value | FLOAT64 | Sensor reading value |
-| unit | STRING | Measurement unit |
-| farm_location | STRING | Geographic farm location |
-| crop_type | STRING | Type of crop being monitored |
-| latitude | FLOAT64 | GPS latitude coordinate |
-| longitude | FLOAT64 | GPS longitude coordinate |
-| battery_level | FLOAT64 | Sensor battery percentage |
-| signal_strength | FLOAT64 | Communication signal strength |
+| sensor_id | STRING | Identificador único do sensor |
+| sensor_type | STRING | Tipo de sensor (umidade_solo, temperatura, etc.) |
+| timestamp | TIMESTAMP | Carimbo de data/hora da leitura |
+| value | FLOAT64 | Valor da leitura do sensor |
+| unit | STRING | Unidade de medida |
+| farm_location | STRING | Localização geográfica da fazenda |
+| crop_type | STRING | Tipo de cultura sendo monitorada |
+| latitude | FLOAT64 | Coordenada de latitude GPS |
+| longitude | FLOAT64 | Coordenada de longitude GPS |
+| battery_level | FLOAT64 | Porcentagem da bateria do sensor |
+| signal_strength | FLOAT64 | Força do sinal de comunicação |
 
-#### Weather Data Table
-| Column | Type | Description |
+#### Tabela de Dados Climáticos
+| Coluna | Tipo | Descrição |
 |--------|------|-------------|
-| date | DATE | Weather observation date |
-| location | STRING | Geographic location |
-| temperature_high | FLOAT64 | Daily high temperature (°C) |
-| temperature_low | FLOAT64 | Daily low temperature (°C) |
-| humidity | FLOAT64 | Relative humidity percentage |
-| rainfall_mm | FLOAT64 | Daily rainfall in millimeters |
-| wind_speed_kmh | FLOAT64 | Wind speed in km/h |
-| uv_index | FLOAT64 | UV index (0-11 scale) |
+| date | DATE | Data de observação do clima |
+| location | STRING | Localização geográfica |
+| temperature_high | FLOAT64 | Temperatura máxima diária (°C) |
+| temperature_low | FLOAT64 | Temperatura mínima diária (°C) |
+| humidity | FLOAT64 | Porcentagem de umidade relativa |
+| rainfall_mm | FLOAT64 | Precipitação diária em milímetros |
+| wind_speed_kmh | FLOAT64 | Velocidade do vento em km/h |
+| uv_index | FLOAT64 | Índice UV (escala de 0-11) |
 
-#### Crop Yield Data Table
-| Column | Type | Description |
+#### Tabela de Dados de Produtividade da Cultura
+| Coluna | Tipo | Descrição |
 |--------|------|-------------|
-| location | STRING | Farm location |
-| crop_type | STRING | Type of crop |
-| planting_date | DATE | Date of planting |
-| harvest_date | DATE | Expected/actual harvest date |
-| area_hectares | FLOAT64 | Planted area in hectares |
-| predicted_yield_kg_ha | FLOAT64 | Predicted yield per hectare |
-| actual_yield_kg_ha | FLOAT64 | Actual yield per hectare |
-| irrigation_type | STRING | Type of irrigation system |
-| fertilizer_usage_kg_ha | FLOAT64 | Fertilizer usage per hectare |
+| location | STRING | Localização da fazenda |
+| crop_type | STRING | Tipo de cultura |
+| planting_date | DATE | Data de plantio |
+| harvest_date | DATE | Data de colheita esperada/real |
+| area_hectares | FLOAT64 | Área plantada em hectares |
+| predicted_yield_kg_ha | FLOAT64 | Produtividade prevista por hectare |
+| actual_yield_kg_ha | FLOAT64 | Produtividade real por hectare |
+| irrigation_type | STRING | Tipo de sistema de irrigação |
+| fertilizer_usage_kg_ha | FLOAT64 | Uso de fertilizante por hectare |
 
-### 🔍 Key Analytics Features
+### 🔍 Principais Funcionalidades de Analytics
 
-**Crop Health Monitoring**
-- Real-time vegetation index calculation
-- Disease and pest detection using image analysis
-- Growth stage tracking and optimization
-- Stress detection through sensor data correlation
-- Yield prediction with confidence intervals
+**Monitoramento de Saúde das Culturas**
+- Cálculo de índice de vegetação em tempo real
+- Detecção de doenças e pragas usando análise de imagem
+- Rastreamento e otimização de estágios de crescimento
+- Detecção de estresse através de correlação de dados de sensores
+- Predição de produtividade com intervalos de confiança
 
-**Soil Analytics**
-- Soil moisture optimization for irrigation
-- Nutrient level monitoring and recommendations
-- pH balance tracking and adjustment
-- Soil temperature analysis for planting timing
-- Erosion risk assessment and prevention
+**Analytics de Solo**
+- Otimização de umidade do solo para irrigação
+- Monitoramento de níveis de nutrientes e recomendações
+- Rastreamento e ajuste do equilíbrio de pH
+- Análise de temperatura do solo para timing de plantio
+- Avaliação e prevenção de risco de erosão
 
-**Weather Intelligence**
-- Microclimate analysis and forecasting
-- Frost warning and protection systems
-- Drought stress monitoring and mitigation
-- Optimal spraying condition identification
-- Seasonal planning and risk assessment
+**Inteligência Climática**
+- Análise e previsão de microclima
+- Sistemas de alerta e proteção contra geadas
+- Monitoramento e mitigação de estresse por seca
+- Identificação de condições ideais de pulverização
+- Planejamento sazonal e avaliação de riscos
 
-**Resource Optimization**
-- Water usage efficiency analysis
-- Fertilizer application optimization
-- Energy consumption monitoring
-- Equipment utilization tracking
-- Cost-benefit analysis for interventions
+**Otimização de Recursos**
+- Análise de eficiência do uso da água
+- Otimização da aplicação de fertilizantes
+- Monitoramento do consumo de energia
+- Rastreamento da utilização de equipamentos
+- Análise de custo-benefício para intervenções
 
-### 🧪 Machine Learning Models
+### 🧪 Modelos de Machine Learning
 
-#### Crop Yield Prediction
+#### Predição de Produtividade da Cultura
 ```python
-# Random Forest for yield prediction
+# Random Forest para predição de produtividade
 from sklearn.ensemble import RandomForestRegressor
 
 yield_model = RandomForestRegressor(
@@ -279,30 +285,30 @@ yield_model = RandomForestRegressor(
     random_state=42
 )
 
-# Features: weather, soil, historical yield, etc.
+# Features: clima, solo, produtividade histórica, etc.
 yield_model.fit(X_train, y_train)
 predicted_yield = yield_model.predict(X_test)
 ```
 
-#### Irrigation Optimization
+#### Otimização de Irrigação
 ```python
-# Neural Network for irrigation scheduling
+# Rede Neural para agendamento de irrigação
 import tensorflow as tf
 
 irrigation_model = tf.keras.Sequential([
-    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(128, activation=\'relu\'),
     tf.keras.layers.Dropout(0.3),
-    tf.keras.layers.Dense(64, activation='relu'),
-    tf.keras.layers.Dense(32, activation='relu'),
-    tf.keras.layers.Dense(1, activation='sigmoid')
+    tf.keras.layers.Dense(64, activation=\'relu\'),
+    tf.keras.layers.Dense(32, activation=\'relu\'),
+    tf.keras.layers.Dense(1, activation=\'sigmoid\')
 ])
 
-irrigation_model.compile(optimizer='adam', loss='binary_crossentropy')
+irrigation_model.compile(optimizer=\'adam\', loss=\'binary_crossentropy\')
 ```
 
-#### Anomaly Detection
+#### Detecção de Anomalias
 ```python
-# Isolation Forest for sensor anomaly detection
+# Isolation Forest para detecção de anomalias de sensores
 from sklearn.ensemble import IsolationForest
 
 anomaly_detector = IsolationForest(
@@ -314,44 +320,42 @@ anomaly_detector.fit(sensor_data)
 anomalies = anomaly_detector.predict(new_data)
 ```
 
-### 📈 Performance Metrics
-
-| Metric | Target | Current |
+| Métrica | Meta | Atual |
 |--------|--------|---------|
-| **Data Ingestion Rate** | 10k msgs/sec | 12k msgs/sec |
-| **Prediction Accuracy** | > 85% | 89.2% |
-| **System Uptime** | 99.9% | 99.95% |
-| **Alert Response Time** | < 5 minutes | 2.3 minutes |
-| **Battery Life** | > 1 year | 14 months |
-| **Data Freshness** | < 1 minute | 30 seconds |
+| **Taxa de Ingestão de Dados** | 10k msgs/seg | 12k msgs/seg |
+| **Precisão da Predição** | > 85% | 89.2% |
+| **Tempo de Atividade do Sistema** | 99.9% | 99.95% |
+| **Tempo de Resposta do Alerta** | < 5 minutos | 2.3 minutos |
+| **Vida Útil da Bateria** | > 1 ano | 14 meses |
+| **Atualização dos Dados** | < 1 minuto | 30 segundos |
 
-### 🧪 Testing
+### 🧪 Testes
 
 ```bash
-# Run unit tests
+# Executar testes unitários
 pytest tests/unit/
 
-# Run integration tests
+# Executar testes de integração
 pytest tests/integration/
 
-# Run IoT simulation tests
+# Executar testes de simulação IoT
 python tests/iot_simulation.py
 
-# Run model validation
+# Executar validação de modelo
 pytest tests/models/
 
-# Performance testing
+# Executar testes de desempenho
 python tests/performance/load_test.py
 ```
 
-### 📚 API Documentation
+### 📚 Documentação da API
 
-#### Get Sensor Data
+#### Obter Dados do Sensor
 ```bash
 GET /api/v1/sensors/{sensor_id}/data?start_date=2025-07-01&end_date=2025-07-07
 ```
 
-#### Submit Irrigation Command
+#### Enviar Comando de Irrigação
 ```bash
 POST /api/v1/irrigation/schedule
 {
@@ -361,49 +365,49 @@ POST /api/v1/irrigation/schedule
 }
 ```
 
-#### Get Yield Prediction
+#### Obter Predição de Produtividade
 ```bash
 GET /api/v1/predictions/yield/{field_id}
 ```
 
-### 🔧 Configuration
+### 🔧 Configuração
 
-#### Environment Variables
+#### Variáveis de Ambiente
 ```bash
-# GCP Configuration
+# Configuração GCP
 GOOGLE_CLOUD_PROJECT=your-project-id
 IOT_REGISTRY_ID=farm-sensors
 IOT_REGION=us-central1
 
-# Database Configuration
+# Configuração do Banco de Dados
 BIGQUERY_DATASET=agriculture
 FIRESTORE_COLLECTION=sensor_data
 
-# ML Configuration
+# Configuração ML
 MODEL_VERSION=v1.5.0
 PREDICTION_INTERVAL_HOURS=6
 ANOMALY_THRESHOLD=0.1
 
-# IoT Configuration
+# Configuração IoT
 MQTT_BRIDGE_HOSTNAME=mqtt.googleapis.com
 MQTT_BRIDGE_PORT=8883
 ```
 
-### 📚 Documentation
+### 📚 Documentação
 
-- [IoT Setup Guide](docs/iot_setup.md)
-- [API Documentation](docs/api.md)
-- [Model Training Guide](docs/model_training.md)
-- [Deployment Guide](docs/deployment.md)
-- [Troubleshooting](docs/troubleshooting.md)
+- [Guia de Configuração IoT](docs/iot_setup.md)
+- [Documentação da API](docs/api.md)
+- [Guia de Treinamento de Modelo](docs/model_training.md)
+- [Guia de Implantação](docs/deployment.md)
+- [Solução de Problemas](docs/troubleshooting.md)
 
-### 🤝 Contributing
+### 🤝 Contribuindo
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Faça um fork do repositório
+2. Crie uma branch de recurso (`git checkout -b feature/amazing-feature`)
+3. Faça suas alterações (`git commit -m 'Adicione um recurso incrível'`)
+4. Envie para a branch (`git push origin feature/amazing-feature`)
+5. Abra um Pull Request
 
 ### 👨‍💻 Author
 
@@ -416,12 +420,12 @@ MQTT_BRIDGE_PORT=8883
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### 🙏 Acknowledgments
+### 🙏 Agradecimentos
 
-- Google Cloud Platform for providing robust IoT and analytics infrastructure
-- Agricultural research institutions for domain expertise
-- IoT sensor manufacturers for hardware partnerships
-- Open source community for excellent tools and frameworks
+- Google Cloud Platform por fornecer infraestrutura robusta de IoT e analytics
+- Instituições de pesquisa agrícola pela expertise de domínio
+- Fabricantes de sensores IoT pelas parcerias de hardware
+- Comunidade open source pelas excelentes ferramentas e frameworks
 
 ---
 
@@ -448,6 +452,33 @@ A plataforma demonstra como a tecnologia moderna pode revolucionar a agricultura
 - Monitoramento de saúde do solo e otimização de nutrientes
 - Agendamento de irrigação e otimização do uso de água
 - Sistemas de alerta precoce para pragas e doenças
+
+**Insights de Agricultura Inteligente**
+- Recomendações de otimização de recursos
+- Estratégias de redução de custos e análise de ROI
+- Métricas de sustentabilidade e impacto ambiental
+- Benchmarking de desempenho entre diferentes fazendas
+- Sistema de alerta automatizado para condições críticas
+
+**Agricultura de Precisão**
+- Mapeamento de aplicação de taxa variável
+- Zoneamento de campo baseado em características do solo e da cultura
+- Integração de equipamentos guiados por GPS
+- Análise de imagens de drones e satélites
+- Otimização do tempo de colheita
+
+### 🛠️ Pilha Tecnológica
+
+| Componente | Tecnologia | Propósito |
+|-----------|------------|---------|
+| **Plataforma IoT** | GCP IoT Core, MQTT, LoRaWAN | Conectividade de dispositivos e ingestão de dados |
+| **Analytics** | Python, Pandas, NumPy, SciPy | Análise de dados e computação estatística |
+| **Machine Learning** | TensorFlow, AutoML, scikit-learn | Modelagem preditiva e insights de IA |
+| **Visualização** | Looker Studio, Plotly, Folium | Dashboards interativos e mapeamento |
+| **Banco de Dados** | BigQuery, Cloud Firestore | Armazenamento de dados e armazenamento em tempo real |
+| **Infraestrutura** | GCP, Terraform, Kubernetes | Infraestrutura e orquestração em nuvem |
+| **APIs** | FastAPI, Cloud Functions | Serviços REST e computação sem servidor |
+| **Monitoramento** | Cloud Monitoring, Grafana | Monitoramento e alertas de sistema |
 
 ### 📊 Impacto nos Negócios
 
@@ -494,10 +525,61 @@ source venv/bin/activate  # No Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. **Gere dados de exemplo e treine modelos**
+4. **Configure as credenciais GCP e IoT Core**
+```bash
+# Configure a chave da conta de serviço
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-key.json"
+export GOOGLE_CLOUD_PROJECT="your-project-id"
+
+# Habilite as APIs necessárias
+gcloud services enable iot.googleapis.com
+gcloud services enable pubsub.googleapis.com
+gcloud services enable dataflow.googleapis.com
+```
+
+5. **Configure dispositivos IoT e registro**
+```bash
+# Crie o registro IoT
+gcloud iot registries create farm-sensors \
+    --project=$GOOGLE_CLOUD_PROJECT \
+    --region=us-central1 \
+    --event-notification-config=topic=sensor-events
+
+# Registre dispositivos IoT
+python scripts/register_devices.py
+```
+
+6. **Implante a infraestrutura com Terraform**
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+7. **Gere dados de exemplo e treine modelos**
 ```bash
 cd src
 python iot_data_processor.py
+```
+
+8. **Inicie o pipeline de analytics**
+```bash
+# Inicie o pipeline de processamento de dados
+python pipeline/start_dataflow.py
+
+# Inicie o servidor API
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+#### Implantação Docker
+
+```bash
+# Construa e execute com Docker Compose
+docker-compose up --build
+
+# Implante no Kubernetes
+kubectl apply -f k8s/
 ```
 
 ### 🔍 Principais Funcionalidades de Analytics
